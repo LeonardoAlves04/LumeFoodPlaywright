@@ -5,15 +5,13 @@ describe("Orange HRM Tests", () => {
     username: '[name="username"]',
     password: "[name='password']",
     submit: "[type='submit']",
-    alert: "[role='alert']",
+    alert: "[class='orangehrm-login-error']",
     sectionTitleTopBar: "[class='oxd-topbar-header-breadcrumb-module']",
     dashboardGrid: "[class='oxd-layout-context']",
   };
 
-  it("Login - Success", () => {
-    cy.visit(
-      "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login",
-    );
+  it.only("User Info Success - Success", () => {
+    cy.visit("auth/login");
     cy.get(selectorsList.username).type(userData.userSuccess.username);
     cy.get(selectorsList.password).type(userData.userSuccess.password);
     cy.get(selectorsList.submit).click();
@@ -22,9 +20,7 @@ describe("Orange HRM Tests", () => {
   });
 
   it("Login - Fail", () => {
-    cy.visit(
-      "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login",
-    );
+    cy.visit("auth/login");
     cy.get(selectorsList.username).type(userData.userFail.username);
     cy.get(selectorsList.password).type(userData.userFail.password);
     cy.get(selectorsList.submit).click();
