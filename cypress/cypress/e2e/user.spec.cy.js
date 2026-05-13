@@ -8,6 +8,9 @@ describe("Orange HRM Tests", () => {
     alert: "[class='orangehrm-login-error']",
     sectionTitleTopBar: "[class='oxd-topbar-header-breadcrumb-module']",
     dashboardGrid: "[class='oxd-layout-context']",
+    myInfoButton: "[href='/web/index.php/pim/viewMyDetails']",
+    firstNameField: "[name='firstName']",
+    lastNameField: "[name='lastName']",
   };
 
   it.only("User Info Success - Success", () => {
@@ -17,6 +20,10 @@ describe("Orange HRM Tests", () => {
     cy.get(selectorsList.submit).click();
     cy.location("pathname").should("equal", "/web/index.php/dashboard/index");
     cy.get(selectorsList.dashboardGrid);
+    cy.get(selectorsList.myInfoButton).click();
+    cy.get(selectorsList.firstNameField, { timeout: 10000 }).type(
+      "NicknameTest",
+    );
   });
 
   it("Login - Fail", () => {
