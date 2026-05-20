@@ -1,11 +1,10 @@
 import userData from "../fixtures/user-data.json";
+import LoginPage from "./../pages/loginPage";
+
+const loginPage = new LoginPage();
 
 describe("Orange HRM Tests", () => {
   const selectorsList = {
-    username: '[name="username"]',
-    password: "[name='password']",
-    submit: "[type='submit']",
-    alert: "[class='orangehrm-login-error']",
     sectionTitleTopBar: "[class='oxd-topbar-header-breadcrumb-module']",
     dashboardGrid: "[class='oxd-layout-context']",
     myInfoButton: "[href='/web/index.php/pim/viewMyDetails']",
@@ -22,10 +21,11 @@ describe("Orange HRM Tests", () => {
   };
 
   it.only("User Info Success - Success", () => {
-    cy.visit("auth/login");
-    cy.get(selectorsList.username).type(userData.userSuccess.username);
-    cy.get(selectorsList.password).type(userData.userSuccess.password);
-    cy.get(selectorsList.submit).click();
+    loginPage.acessLoginPage();
+    loginPage.loginWithUser(
+      userData.userSuccess.username,
+      userData.userSuccess.password,
+    );
     cy.location("pathname").should("equal", "/web/index.php/dashboard/index");
     cy.get(selectorsList.dashboardGrid);
     cy.get(selectorsList.myInfoButton).click();
