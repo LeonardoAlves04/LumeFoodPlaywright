@@ -1,13 +1,14 @@
 import userData from "../fixtures/user-data.json";
 import LoginPage from "./../pages/loginPage";
+import DashboardPage from "./../pages/dashboardPage";
+import MenuPage from "../pages/menuPage";
 
 const loginPage = new LoginPage();
+const dashboardPage = new DashboardPage();
+const menuPage = new MenuPage();
 
 describe("Orange HRM Tests", () => {
   const selectorsList = {
-    sectionTitleTopBar: "[class='oxd-topbar-header-breadcrumb-module']",
-    dashboardGrid: "[class='oxd-layout-context']",
-    myInfoButton: "[href='/web/index.php/pim/viewMyDetails']",
     firstNameField: "[name='firstName']",
     middleNameField: "[name='middleName']",
     lastNameField: "[name='lastName']",
@@ -26,9 +27,9 @@ describe("Orange HRM Tests", () => {
       userData.userSuccess.username,
       userData.userSuccess.password,
     );
-    cy.location("pathname").should("equal", "/web/index.php/dashboard/index");
-    cy.get(selectorsList.dashboardGrid);
-    cy.get(selectorsList.myInfoButton).click();
+    dashboardPage.checkDashboardPage();
+    menuPage.acessMyInfo();
+
     cy.get(selectorsList.firstNameField, { timeout: 10000 })
       .clear()
       .type("FirstNameTest");
