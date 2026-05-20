@@ -18,6 +18,7 @@ describe("Orange HRM Tests", () => {
     dateCloseButton: ".--close",
     submitButton: "[type='submit']",
     textInput: ".oxd-select-text-input",
+    radioInput: ".oxd-radio-input",
   };
 
   it.only("User Info Success - Success", () => {
@@ -28,21 +29,22 @@ describe("Orange HRM Tests", () => {
     cy.location("pathname").should("equal", "/web/index.php/dashboard/index");
     cy.get(selectorsList.dashboardGrid);
     cy.get(selectorsList.myInfoButton).click();
-    cy.get(selectorsList.firstNameField, { timeout: 10000 }).type(
-      "FirstNameTest",
-    );
-    cy.get(selectorsList.middleNameField, { timeout: 10000 }).type(
-      "MiddleNameTest",
-    );
-    cy.get(selectorsList.lastNameField, { timeout: 10000 }).type(
-      "LastNameTest",
-    );
+    cy.get(selectorsList.firstNameField, { timeout: 10000 })
+      .clear()
+      .type("FirstNameTest");
+    cy.get(selectorsList.middleNameField, { timeout: 10000 })
+      .clear()
+      .type("MiddleNameTest");
+    cy.get(selectorsList.lastNameField, { timeout: 10000 })
+      .clear()
+      .type("LastNameTest");
     cy.get(selectorsList.genericField, { timeout: 10000 })
       .eq(3)
       .clear()
       .type("123teste");
     cy.get(selectorsList.genericField, { timeout: 10000 })
       .eq(4)
+      .clear()
       .type("OtherIdTest");
     cy.get(selectorsList.genericField, { timeout: 10000 })
       .eq(5)
@@ -57,6 +59,7 @@ describe("Orange HRM Tests", () => {
     cy.contains("Brazilian").click();
     cy.get(selectorsList.textInput).eq(1).click();
     cy.contains("Other").click();
+    cy.get(selectorsList.radioInput).eq(1).click();
     cy.get(selectorsList.submitButton).eq(0).click();
     cy.get("body").should("contain", "Successfully Updated");
   });
