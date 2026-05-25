@@ -19,6 +19,10 @@ class LoginPage {
     cy.get(this.selectorsList().passwordField).type(password);
     cy.get(this.selectorsList().submitButton).click();
   }
+
+  checkLoginError() {
+    cy.get(this.selectorsList().alertMessage).should("be.visible");
+  }
 }
 
 export default LoginPage;
