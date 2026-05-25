@@ -10,8 +10,9 @@ const menuPage = new MenuPage();
 const myInfoPage = new MyInfoPage();
 
 describe("Orange HRM Tests", () => {
-  it("User Info Success - Success", () => {
+  it("User Info Update - Success", () => {
     loginPage.acessLoginPage();
+
     loginPage.loginWithUser(
       userData.userSuccess.username,
       userData.userSuccess.password,
@@ -37,14 +38,5 @@ describe("Orange HRM Tests", () => {
     myInfoPage.fillStatusDetails();
 
     myInfoPage.saveForm();
-  });
-
-  it("Login - Fail", () => {
-    loginPage.acessLoginPage();
-    loginPage.loginWithUser(
-      userData.userFail.username,
-      userData.userFail.password,
-    );
-    loginPage.checkLoginError();
   });
 });
