@@ -150,7 +150,6 @@ npx cypress run --spec "cypress/e2e/user.spec.cy.js"
 
 -  **Page Object Model** para separação de responsabilidades
 -  **Fixtures** para gerenciamento de massa de dados
--  **Seletores semânticos** priorizando `data-cy`, IDs e atributos ARIA
 -  **Nomenclatura descritiva** nos testes (`describe` / `it` legíveis)
 -  **Isolamento de testes** — cada `it` é independente
 -  **Constantes para seletores** evitando strings duplicadas
