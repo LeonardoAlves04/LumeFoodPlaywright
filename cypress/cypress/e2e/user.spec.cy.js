@@ -27,7 +27,7 @@ describe("Orange HRM Tests", () => {
 
     myInfoPage.fillPersonalDetails(
       chance.first(),
-      chance.middle(),
+      chance.name({ middle: true }),
       chance.last(),
     );
 

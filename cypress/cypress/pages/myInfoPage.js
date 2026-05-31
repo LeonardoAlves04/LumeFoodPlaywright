@@ -19,14 +19,14 @@ class MyInfoPage {
   }
 
   fillPersonalDetails(firstName, middleName, lastName) {
-    cy.get(this.selectorsList().firstNameField, { timeout: 10000 })
-      .clear()
+    cy.get(this.selectorsList().firstNameField)
+      .clear({ timeout: 10000 })
       .type(firstName);
-    cy.get(this.selectorsList().middleNameField, { timeout: 10000 })
-      .clear()
+    cy.get(this.selectorsList().middleNameField)
+      .clear({ timeout: 10000 })
       .type(middleName);
-    cy.get(this.selectorsList().lastNameField, { timeout: 10000 })
-      .clear()
+    cy.get(this.selectorsList().lastNameField)
+      .clear({ timeout: 10000 })
       .type(lastName);
   }
 
@@ -57,9 +57,9 @@ class MyInfoPage {
   fillStatusDetails() {
     cy.get(this.selectorsList().dateCloseButton).click();
     cy.get(this.selectorsList().genericCombobox).eq(0).click({ force: true });
-    cy.get(this.selectorsList().secondItemCombobox).click();
+    cy.get(this.selectorsList().secondItemCombobox).eq(0).click();
     cy.get(this.selectorsList().genericCombobox).eq(1).click({ force: true });
-    cy.get(this.selectorsList().thirdItemCombobox).click();
+    cy.get(this.selectorsList().thirdItemCombobox).eq(0).click();
     cy.get(this.selectorsList().radioInput).eq(1).click();
   }
 
