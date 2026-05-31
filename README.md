@@ -94,10 +94,10 @@ Antes de começar, certifique-se de ter instalado em sua máquina:
 
 ```bash
 # Clone o repositório
-git clone https://github.com/seu-usuario/seu-repositorio.git
+git clone https://github.com/LeonardoAlves04/orange-hrm-cypress
 
 # Acesse a pasta do projeto
-cd seu-repositorio
+cd orange-hrm-cypress
 
 # Instale as dependências
 npm install
