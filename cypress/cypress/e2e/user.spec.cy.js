@@ -4,6 +4,9 @@ import DashboardPage from "./../pages/dashboardPage";
 import MenuPage from "../pages/menuPage";
 import MyInfoPage from "../pages/myInfoPage";
 
+const Chance = require("chance");
+
+const chance = new Chance();
 const loginPage = new LoginPage();
 const dashboardPage = new DashboardPage();
 const menuPage = new MenuPage();
@@ -23,16 +26,16 @@ describe("Orange HRM Tests", () => {
     menuPage.acessMyInfo();
 
     myInfoPage.fillPersonalDetails(
-      "TestFirstName",
-      "TestMiddleName",
-      "TestLastName",
+      chance.first(),
+      chance.middle(),
+      chance.last(),
     );
 
     myInfoPage.fillEmploymentDetails(
-      "12345",
-      "67890",
-      "A1234567",
-      "2024-01-01",
+      chance.string({ length: 5 }),
+      chance.string({ length: 5 }),
+      chance.string({ length: 7 }),
+      chance.date({ year: 2024 }).toISOString().split("T")[0],
     );
 
     myInfoPage.fillStatusDetails();
