@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🧪 OrangeHRM — Automação de Testes com Cypress
+# OrangeHRM — Automação de Testes com Cypress
 
 ![Cypress](https://img.shields.io/badge/Cypress-17202C?style=for-the-badge&logo=cypress&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
@@ -13,7 +13,7 @@
 
 ---
 
-## 📋 Índice
+## Índice
 
 - [Sobre o Projeto](#-sobre-o-projeto)
 - [Tecnologias Utilizadas](#-tecnologias-utilizadas)
@@ -23,12 +23,11 @@
 - [Instalação](#-instalação)
 - [Como Executar](#-como-executar)
 - [Estrutura de Pastas](#-estrutura-de-pastas)
-- [Boas Práticas Adotadas](#-boas-práticas-adotadas)
-- [Autora](#-autora)
+- [Boas Práticas Adotadas](#-boas-práticas-adotadas)/
 
 ---
 
-## 🔎 Sobre o Projeto
+## Sobre o Projeto
 
 Este projeto tem como objetivo validar as funcionalidades principais do **OrangeHRM**, um sistema open source de Recursos Humanos amplamente utilizado para fins de prática em Quality Assurance.
 
@@ -38,7 +37,7 @@ A automação cobre fluxos críticos da aplicação, garantindo que as funcional
 
 ---
 
-## 🛠 Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 | Tecnologia | Versão | Finalidade |
 |---|---|---|
@@ -48,7 +47,7 @@ A automação cobre fluxos críticos da aplicação, garantindo que as funcional
 
 ---
 
-## 🏗 Arquitetura do Projeto
+## Arquitetura do Projeto
 
 O projeto foi estruturado seguindo dois padrões fundamentais de QA:
 
@@ -64,24 +63,24 @@ Dados de teste (credenciais, inputs de formulário) são isolados em arquivos `.
 
 ---
 
-## ✅ Casos de Teste
+## Casos de Teste
 
-### 🔐 Login / Autenticação
+### Login / Autenticação
 - Login com credenciais válidas
 - Login com credenciais inválidas (usuário ou senha incorretos)
 - Validação de mensagem de erro ao deixar campos em branco
 
-### 👥 Gerenciamento de Usuários
+### Gerenciamento de Usuários
 - Cadastro de novo usuário com dados válidos
 - Validação de campos obrigatórios no formulário de cadastro
 
-### 🧭 Navegação
+### Navegação
 - Verificação dos itens do menu lateral
 - Redirecionamento correto entre módulos do sistema
 
 ---
 
-## ⚙️ Pré-requisitos
+## Pré-requisitos
 
 Antes de começar, certifique-se de ter instalado em sua máquina:
 
@@ -91,7 +90,7 @@ Antes de começar, certifique-se de ter instalado em sua máquina:
 
 ---
 
-## 🚀 Instalação
+## Instalação
 
 ```bash
 # Clone o repositório
@@ -106,7 +105,7 @@ npm install
 
 ---
 
-## ▶️ Como Executar
+## Como Executar
 
 ### Abrir o Cypress Test Runner (modo interativo)
 ```bash
@@ -125,7 +124,7 @@ npx cypress run --spec "cypress/e2e/user.spec.cy.js"
 
 ---
 
-## 📁 Estrutura de Pastas
+## Estrutura de Pastas
 
 ```
 📦 cypress-orangehrm
@@ -147,20 +146,16 @@ npx cypress run --spec "cypress/e2e/user.spec.cy.js"
 
 ---
 
-## 💡 Boas Práticas Adotadas
+##  Boas Práticas Adotadas
 
-- ✅ **Page Object Model** para separação de responsabilidades
-- ✅ **Fixtures** para gerenciamento de massa de dados
-- ✅ **Seletores semânticos** priorizando `data-cy`, IDs e atributos ARIA
-- ✅ **Nomenclatura descritiva** nos testes (`describe` / `it` legíveis)
-- ✅ **Isolamento de testes** — cada `it` é independente
-- ✅ **Constantes para seletores** evitando strings duplicadas
+-  **Page Object Model** para separação de responsabilidades
+-  **Fixtures** para gerenciamento de massa de dados
+-  **Seletores semânticos** priorizando `data-cy`, IDs e atributos ARIA
+-  **Nomenclatura descritiva** nos testes (`describe` / `it` legíveis)
+-  **Isolamento de testes** — cada `it` é independente
+-  **Constantes para seletores** evitando strings duplicadas
 
 ---
-
-## 👩‍💻 Autora
-
-Feito com 💙 por **[Seu Nome]**
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/seu-perfil)
 [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/seu-usuario)
