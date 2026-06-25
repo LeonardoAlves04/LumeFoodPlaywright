@@ -23,21 +23,21 @@ class RecruitmentPage {
   checkVacanciesPage() {
     cy.url().should("include", "/recruitment");
     cy.contains(this.selectorsList().pageTitle, "Recruitment").should(
-      "be.visible"
+      "be.visible",
     );
   }
 
   checkCandidatesPage() {
     cy.url().should("include", "/viewCandidates");
     cy.contains(this.selectorsList().pageTitle, "Recruitment").should(
-      "be.visible"
+      "be.visible",
     );
   }
 
   checkAddCandidatePage() {
     cy.url().should("include", "/addCandidate");
     cy.contains(this.selectorsList().pageTitle, "Add Candidate").should(
-      "be.visible"
+      "be.visible",
     );
   }
 
@@ -56,9 +56,16 @@ class RecruitmentPage {
   }
 
   fillCandidateForm(firstName, lastName, email) {
-    cy.get(this.selectorsList().firstNameField).clear().type(firstName);
-    cy.get(this.selectorsList().lastNameField).clear().type(lastName);
-    cy.contains(this.selectorsList().emailField, "Email").find("input").clear().type(email);
+    cy.get(this.selectorsList().firstNameField)
+      .clear({ timeout: 10000 })
+      .type(firstName);
+    cy.get(this.selectorsList().lastNameField)
+      .clear({ timeout: 10000 })
+      .type(lastName);
+    cy.contains(this.selectorsList().emailField, "Email")
+      .find("input")
+      .clear({ timeout: 10000 })
+      .type(email);
   }
 
   saveForm() {
@@ -68,7 +75,13 @@ class RecruitmentPage {
   checkRequiredFieldErrors() {
     cy.get(this.selectorsList().errorMessage).should(
       "have.length.greaterThan",
-      0
+      0,
+    );
+  }
+
+  checkInvalidEmailError() {
+    cy.contains(this.selectorsList().errorMessage, "Expected format").should(
+      "be.visible",
     );
   }
 

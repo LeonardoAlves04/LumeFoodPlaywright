@@ -19,14 +19,14 @@ class MyInfoPage {
   }
 
   fillPersonalDetails(firstName, middleName, lastName) {
-    cy.get(this.selectorsList().firstNameField)
-      .clear({ timeout: 10000 })
+    cy.get(this.selectorsList().firstNameField, { timeout: 10000 })
+      .clear()
       .type(firstName);
-    cy.get(this.selectorsList().middleNameField)
-      .clear({ timeout: 10000 })
+    cy.get(this.selectorsList().middleNameField, { timeout: 10000 })
+      .clear()
       .type(middleName);
-    cy.get(this.selectorsList().lastNameField)
-      .clear({ timeout: 10000 })
+    cy.get(this.selectorsList().lastNameField, { timeout: 10000 })
+      .clear()
       .type(lastName);
   }
 

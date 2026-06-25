@@ -40,11 +40,20 @@ class BuzzPage {
   checkPostInputHasText(text) {
     cy.get(this.selectorsList().postInput)
       .first()
-      .should("have.length.greaterThan", 0);
+      .should(($field) => {
+        expect($field.val() || $field.text()).to.contain(text);
+      });
   }
 
   submitPost() {
     cy.get(this.selectorsList().postButton).contains("Post").click();
+  }
+
+  checkPostInFeed(text) {
+    cy.get(".oxd-loading-spinner", { timeout: 8000 }).should("not.exist");
+    cy.contains(this.selectorsList().posts, text, { timeout: 10000 }).should(
+      "be.visible"
+    );
   }
 }
 

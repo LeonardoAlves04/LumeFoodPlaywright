@@ -59,10 +59,22 @@ class PimPage {
     cy.url().should("include", "/addEmployee");
   }
 
-  fillEmployeeForm(firstName, middleName, lastName) {
-    cy.get(this.selectorsList().firstNameField).clear().type(firstName);
-    cy.get(this.selectorsList().middleNameField).clear().type(middleName);
-    cy.get(this.selectorsList().lastNameField).clear().type(lastName);
+  fillEmployeeForm(firstName, middleName, lastName, employeeId = "") {
+    cy.get(this.selectorsList().firstNameField)
+      .clear({ timeout: 10000 })
+      .type(firstName);
+    cy.get(this.selectorsList().middleNameField)
+      .clear({ timeout: 10000 })
+      .type(middleName);
+    cy.get(this.selectorsList().lastNameField)
+      .clear({ timeout: 10000 })
+      .type(lastName);
+
+    if (employeeId) {
+      cy.get(this.selectorsList().employeeIdField)
+        .clear({ timeout: 10000 })
+        .type(employeeId);
+    }
   }
 
   enableCreateLogin(username, password) {
@@ -88,6 +100,23 @@ class PimPage {
 
   checkEmployeeSaved() {
     cy.url().should("include", "/viewPersonalDetails");
+  }
+
+  searchByEmployeeId(employeeId) {
+    cy.contains(".oxd-input-group", "Employee Id")
+      .find("input")
+      .clear()
+      .type(employeeId);
+    cy.get(this.selectorsList().searchButton).click();
+    cy.get(".oxd-loading-spinner", { timeout: 8000 }).should("not.exist");
+  }
+
+  checkEmployeeInTable(employeeId, fullName) {
+    cy.get(this.selectorsList().tableRows)
+      .should("have.length.greaterThan", 0)
+      .first()
+      .should("contain.text", employeeId)
+      .and("contain.text", fullName);
   }
 
   cancelForm() {

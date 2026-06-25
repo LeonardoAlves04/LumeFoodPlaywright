@@ -64,4 +64,10 @@ describe("Dashboard Tests", () => {
     dashboardPage.logout();
     cy.url().should("include", "/auth/login");
   });
+
+  it("Dashboard - Logout Blocks Protected Route", () => {
+    dashboardPage.logout();
+    cy.visit("dashboard/index");
+    cy.url().should("include", "/auth/login");
+  });
 });

@@ -68,4 +68,21 @@ describe("PIM Tests", () => {
     pimPage.saveForm();
     pimPage.checkEmployeeSaved();
   });
+
+  it("PIM - Add Employee and Search by Employee Id", () => {
+    const firstName = chance.first();
+    const middleName = chance.name({ middle: true });
+    const lastName = chance.last();
+    const employeeId = chance.string({ length: 6, pool: "0123456789" });
+
+    pimPage.clickAddEmployee();
+    pimPage.fillEmployeeForm(firstName, middleName, lastName, employeeId);
+    pimPage.saveForm();
+    pimPage.checkEmployeeSaved();
+
+    cy.visit("pim/viewEmployeeList");
+    pimPage.checkEmployeeListPage();
+    pimPage.searchByEmployeeId(employeeId);
+    pimPage.checkEmployeeInTable(employeeId, `${firstName} ${middleName} ${lastName}`);
+  });
 });

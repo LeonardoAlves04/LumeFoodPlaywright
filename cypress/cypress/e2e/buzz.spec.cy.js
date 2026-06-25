@@ -41,4 +41,11 @@ describe("Buzz Tests", () => {
     buzzPage.typePost(postText);
     buzzPage.checkPostInputHasText(postText);
   });
+
+  it("Buzz - Create Post and Show in Feed", () => {
+    const postText = `Automated post ${chance.guid()}`;
+    buzzPage.typePost(postText);
+    buzzPage.submitPost();
+    buzzPage.checkPostInFeed(postText);
+  });
 });

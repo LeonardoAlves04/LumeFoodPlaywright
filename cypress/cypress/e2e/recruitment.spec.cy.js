@@ -60,4 +60,16 @@ describe("Recruitment Tests", () => {
     );
     cy.get("[name='firstName']").should("not.have.value", "");
   });
+
+  it("Recruitment - Add Candidate - Invalid Email Shows Error", () => {
+    cy.visit("recruitment/viewCandidates");
+    recruitmentPage.clickAddCandidate();
+    recruitmentPage.fillCandidateForm(
+      chance.first(),
+      chance.last(),
+      "invalid-email"
+    );
+    recruitmentPage.saveForm();
+    recruitmentPage.checkInvalidEmailError();
+  });
 });
