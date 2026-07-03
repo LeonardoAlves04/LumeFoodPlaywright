@@ -1,12 +1,23 @@
 {
+  "name": "lumefood-e2e-tests",
+  "version": "1.0.0",
+  "description": "Testes end-to-end para o LumeFood com Playwright.",
   "scripts": {
-    "cy:open": "cypress open",
-    "cy:run": "cypress run"
+    "browsers:install": "set PLAYWRIGHT_BROWSERS_PATH=.\\work\\ms-playwright&& playwright install chromium",
+    "test": "set PLAYWRIGHT_BROWSERS_PATH=.\\work\\ms-playwright&& playwright test",
+    "test:headed": "set PLAYWRIGHT_BROWSERS_PATH=.\\work\\ms-playwright&& playwright test --headed",
+    "test:ui": "set PLAYWRIGHT_BROWSERS_PATH=.\\work\\ms-playwright&& playwright test --ui",
+    "report": "set PLAYWRIGHT_BROWSERS_PATH=.\\work\\ms-playwright&& playwright show-report"
   },
+  "keywords": [
+    "playwright",
+    "e2e",
+    "qa",
+    "portfolio"
+  ],
+  "author": "",
+  "license": "MIT",
   "devDependencies": {
-    "cypress": "^15.4.0"
-  },
-  "dependencies": {
-    "chance": "^1.1.13"
+    "@playwright/test": "^1.61.1"
   }
 }
