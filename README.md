@@ -1,6 +1,5 @@
 # LumeFood — Testes E2E com Playwright e BDD
 
-<<<<<<< HEAD
 Suíte end-to-end do LumeFood escrita com Playwright, Cucumber/Gherkin e
 `playwright-bdd`. Os cenários descrevem o comportamento em português e são
 convertidos em testes Playwright antes da execução.
