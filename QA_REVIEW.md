@@ -2,15 +2,12 @@
 
 ## Achados prioritários
 
-1. **Filtro de categoria não restringe a lista.** Ao selecionar Pizza,
-   BurgerHouse e Sushi Zen continuam visíveis. O comportamento esperado está
-   automatizado e marcado com `@known-bug`.
-2. **Possível divergência de total.** A suíte anterior já registra que o total
+1. **Possível divergência de total.** A suíte anterior já registra que o total
    do detalhe do pedido pode divergir do checkout. Recomenda-se comparar subtotal,
    frete, desconto e total numericamente nas duas telas.
-3. **Seletores pouco semânticos.** Remoção (`✕`) e quantidade (`+`/`−`) dependem
+2. **Seletores pouco semânticos.** Remoção (`✕`) e quantidade (`+`/`−`) dependem
    do texto visual. `aria-label` e `data-testid` específicos reduziriam ambiguidades.
-4. **Custo de preparação.** Cada cenário cadastra e autentica pela interface.
+3. **Custo de preparação.** Cada cenário cadastra e autentica pela interface.
    Uma API ou estado de autenticação reutilizável deixaria a suíte mais rápida,
    mantendo apenas os cenários de autenticação pela interface.
 
