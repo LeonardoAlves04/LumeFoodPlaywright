@@ -1,1 +1,7 @@
 node_modules/
+.features-gen/
+playwright-report/
+test-results/
+work/npm-cache/
+work/ms-playwright/
+.env
