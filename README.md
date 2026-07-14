@@ -20,13 +20,13 @@ convertidos em testes Playwright antes da execução.
 ![Status](https://img.shields.io/badge/Status-Em%20Desenvolvimento-yellow?style=for-the-badge)
 
 > Projeto de automação de testes end-to-end (E2E) utilizando Playwright para validar os principais fluxos de um sistema de delivery inspirado no iFood.
->>>>>>> 8c7a2e915c8dedcd0243a4f03a25bf54bdfd3fb2
+
 
 As especificações ficam em `features/` e as definições reutilizáveis em
 `features/steps/`. Os testes antigos foram preservados em `tests/` para facilitar
 a comparação durante a migração.
 
-<<<<<<< HEAD
+
 ## Como executar
 
 ```bash
@@ -155,7 +155,7 @@ npm test
 
 Outros comandos:
 
-<<<<<<< HEAD
+
 ```bash
 npm run bddgen       # valida o Gherkin e gera os testes Playwright
 npm run test:legacy  # executa apenas a suíte anterior à migração BDD
@@ -198,16 +198,12 @@ Abrir o relatório
 ```bash
 npx playwright show-report
 ```
->>>>>>> 8c7a2e915c8dedcd0243a4f03a25bf54bdfd3fb2
 
-O cenário de filtro por Pizza está marcado com `@known-bug` e fora da execução
-padrão: hoje a interface mantém restaurantes de outras categorias visíveis.
-Essa quarentena deve ser removida quando o comportamento do produto for corrigido.
-
-<<<<<<< HEAD
 Cada cenário cria um usuário descartável com e-mail único. Screenshots, vídeos
 e traces são preservados em falhas.
+
 =======
+
 # Estrutura de Pastas
 
 ```text
