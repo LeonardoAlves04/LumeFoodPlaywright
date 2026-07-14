@@ -26,13 +26,6 @@ As especificações ficam em `features/` e as definições reutilizáveis em
 `features/steps/`. Os testes antigos foram preservados em `tests/` para facilitar
 a comparação durante a migração.
 
-
-## Como executar
-
-```bash
-=======
----
-
 # Índice
 
 - Sobre o Projeto
@@ -147,7 +140,6 @@ git clone https://github.com/LeonardoAlves04/LumeFoodPlaywright
 
 cd LumeFoodPlaywright
 
->>>>>>> 8c7a2e915c8dedcd0243a4f03a25bf54bdfd3fb2
 npm install
 npm run browsers:install
 npm test
