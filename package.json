@@ -4,9 +4,13 @@
   "description": "Testes end-to-end para o LumeFood com Playwright.",
   "scripts": {
     "browsers:install": "set PLAYWRIGHT_BROWSERS_PATH=.\\work\\ms-playwright&& playwright install chromium",
+<<<<<<< HEAD
     "bddgen": "bddgen",
     "test": "set PLAYWRIGHT_BROWSERS_PATH=.\\work\\ms-playwright&& bddgen&& playwright test",
     "test:legacy": "set PLAYWRIGHT_BROWSERS_PATH=.\\work\\ms-playwright&& playwright test --config=playwright.legacy.config.js",
+=======
+    "test": "set PLAYWRIGHT_BROWSERS_PATH=.\\work\\ms-playwright&& playwright test",
+>>>>>>> 8c7a2e915c8dedcd0243a4f03a25bf54bdfd3fb2
     "test:headed": "set PLAYWRIGHT_BROWSERS_PATH=.\\work\\ms-playwright&& playwright test --headed",
     "test:ui": "set PLAYWRIGHT_BROWSERS_PATH=.\\work\\ms-playwright&& playwright test --ui",
     "report": "set PLAYWRIGHT_BROWSERS_PATH=.\\work\\ms-playwright&& playwright show-report"
@@ -20,7 +24,11 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
+<<<<<<< HEAD
     "@playwright/test": "^1.61.1",
     "playwright-bdd": "^9.2.0"
+=======
+    "@playwright/test": "^1.61.1"
+>>>>>>> 8c7a2e915c8dedcd0243a4f03a25bf54bdfd3fb2
   }
 }

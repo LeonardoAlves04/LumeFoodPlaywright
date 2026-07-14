@@ -1,5 +1,8 @@
 node_modules/
+<<<<<<< HEAD
 .features-gen/
+=======
+>>>>>>> 8c7a2e915c8dedcd0243a4f03a25bf54bdfd3fb2
 playwright-report/
 test-results/
 work/npm-cache/

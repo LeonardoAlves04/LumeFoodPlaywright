@@ -1,5 +1,6 @@
 // @ts-check
 const { defineConfig, devices } = require('@playwright/test');
+<<<<<<< HEAD
 const { defineBddConfig } = require('playwright-bdd');
 
 const testDir = defineBddConfig({
@@ -10,13 +11,19 @@ const testDir = defineBddConfig({
   tags: 'not @known-bug',
   missingSteps: 'fail-on-gen',
 });
+=======
+>>>>>>> 8c7a2e915c8dedcd0243a4f03a25bf54bdfd3fb2
 
 const baseURL =
   process.env.BASE_URL ||
   'https://lumefood-git-master-henriquemanieris-projects.vercel.app';
 
 module.exports = defineConfig({
+<<<<<<< HEAD
   testDir,
+=======
+  testDir: './tests',
+>>>>>>> 8c7a2e915c8dedcd0243a4f03a25bf54bdfd3fb2
   timeout: 45_000,
   expect: {
     timeout: 8_000,
