@@ -1,6 +1,5 @@
 # LumeFood — Testes E2E com Playwright e BDD
 
-<<<<<<< HEAD
 Suíte end-to-end do LumeFood escrita com Playwright, Cucumber/Gherkin e
 `playwright-bdd`. Os cenários descrevem o comportamento em português e são
 convertidos em testes Playwright antes da execução.
@@ -12,7 +11,7 @@ convertidos em testes Playwright antes da execução.
 - carrinho vazio, inclusão, quantidade, remoção e cupom;
 - validação do endereço e finalização com PIX;
 - histórico vazio e detalhes de um pedido realizado.
-=======
+----
 # LumeFood — Automação de Testes com Playwright
 
 ![Playwright](https://img.shields.io/badge/Playwright-2EAD33?style=for-the-badge&logo=playwright&logoColor=white)
@@ -21,18 +20,11 @@ convertidos em testes Playwright antes da execução.
 ![Status](https://img.shields.io/badge/Status-Em%20Desenvolvimento-yellow?style=for-the-badge)
 
 > Projeto de automação de testes end-to-end (E2E) utilizando Playwright para validar os principais fluxos de um sistema de delivery inspirado no iFood.
->>>>>>> 8c7a2e915c8dedcd0243a4f03a25bf54bdfd3fb2
+
 
 As especificações ficam em `features/` e as definições reutilizáveis em
 `features/steps/`. Os testes antigos foram preservados em `tests/` para facilitar
 a comparação durante a migração.
-
-<<<<<<< HEAD
-## Como executar
-
-```bash
-=======
----
 
 # Índice
 
@@ -148,7 +140,6 @@ git clone https://github.com/LeonardoAlves04/LumeFoodPlaywright
 
 cd LumeFoodPlaywright
 
->>>>>>> 8c7a2e915c8dedcd0243a4f03a25bf54bdfd3fb2
 npm install
 npm run browsers:install
 npm test
@@ -156,18 +147,14 @@ npm test
 
 Outros comandos:
 
-<<<<<<< HEAD
+
 ```bash
 npm run bddgen       # valida o Gherkin e gera os testes Playwright
 npm run test:legacy  # executa apenas a suíte anterior à migração BDD
 npm run report       # abre o relatório HTML da última execução
 ```
+----
 
-Por padrão, a suíte usa a URL publicada configurada em `playwright.config.js`.
-Ela pode ser substituída com a variável `BASE_URL`.
-
-## Cenários conhecidos
-=======
 # Como Executar
 
 Instalar os navegadores do Playwright
@@ -199,16 +186,12 @@ Abrir o relatório
 ```bash
 npx playwright show-report
 ```
->>>>>>> 8c7a2e915c8dedcd0243a4f03a25bf54bdfd3fb2
 
-O cenário de filtro por Pizza está marcado com `@known-bug` e fora da execução
-padrão: hoje a interface mantém restaurantes de outras categorias visíveis.
-Essa quarentena deve ser removida quando o comportamento do produto for corrigido.
-
-<<<<<<< HEAD
 Cada cenário cria um usuário descartável com e-mail único. Screenshots, vídeos
 e traces são preservados em falhas.
-=======
+
+----
+
 # Estrutura de Pastas
 
 ```text
@@ -260,4 +243,3 @@ Durante a execução dos testes foi identificado um possível comportamento inco
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/leonardoalvesalmeida/)
 
 </div>
->>>>>>> 8c7a2e915c8dedcd0243a4f03a25bf54bdfd3fb2
