@@ -153,12 +153,8 @@ npm run bddgen       # valida o Gherkin e gera os testes Playwright
 npm run test:legacy  # executa apenas a suíte anterior à migração BDD
 npm run report       # abre o relatório HTML da última execução
 ```
+----
 
-Por padrão, a suíte usa a URL publicada configurada em `playwright.config.js`.
-Ela pode ser substituída com a variável `BASE_URL`.
-
-## Cenários conhecidos
-=======
 # Como Executar
 
 Instalar os navegadores do Playwright
@@ -194,7 +190,7 @@ npx playwright show-report
 Cada cenário cria um usuário descartável com e-mail único. Screenshots, vídeos
 e traces são preservados em falhas.
 
-=======
+----
 
 # Estrutura de Pastas
 
@@ -247,4 +243,3 @@ Durante a execução dos testes foi identificado um possível comportamento inco
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/leonardoalvesalmeida/)
 
 </div>
->>>>>>> 8c7a2e915c8dedcd0243a4f03a25bf54bdfd3fb2
