@@ -11,7 +11,7 @@ convertidos em testes Playwright antes da execução.
 - carrinho vazio, inclusão, quantidade, remoção e cupom;
 - validação do endereço e finalização com PIX;
 - histórico vazio e detalhes de um pedido realizado.
-- 
+
 # LumeFood — Automação de Testes com Playwright
 
 ![Playwright](https://img.shields.io/badge/Playwright-2EAD33?style=for-the-badge&logo=playwright&logoColor=white)
