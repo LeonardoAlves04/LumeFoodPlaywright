@@ -14,13 +14,9 @@ convertidos em testes Playwright antes da execução.
 ----
 # LumeFood — Automação de Testes com Playwright
 
-<p align-center>
 ![Playwright](https://img.shields.io/badge/Playwright-2EAD33?style=for-the-badge&logo=playwright&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)
-</p>
-
-
 
 > Projeto de automação de testes end-to-end (E2E) utilizando Playwright para validar os principais fluxos de um sistema de delivery inspirado no iFood.
 
